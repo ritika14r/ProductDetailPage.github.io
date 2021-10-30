@@ -1,0 +1,43 @@
+.productPreview{
+    position: relative;
+    
+  }
+  .displayWathchDataTime{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    
+  }
+  .displayWathchDataHeart{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:red;
+    font-size: 40px;
+    font-weight: 600;
+    
+  }
+  .displayWathchDataHeart >i{
+    animation: beat 1s infinite;
+  }
+  .displayWathchDataHeart > p{
+    color: white;
+    margin-top: 14px;
+    
+  }
+  @keyframes beat {
+    0% {
+      transform: scale(1,1);
+    }
+    50% {
+      transform: scale(1.2,1.2);
+    }
+    100% {
+      transform: scale(1,1);
+    }
+  }

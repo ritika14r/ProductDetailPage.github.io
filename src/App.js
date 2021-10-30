@@ -1,25 +1,48 @@
-import logo from './logo.svg';
+import React ,{Component} from 'react';
 import './App.css';
+import ProductInfo from './productDetail/ProductInfo';
+import ProductPreview from './productPreview/ProductPreview';
+import TopBar from './topBar/TopBar';
+import productData from './Utils/productData';
 
-function App() {
+class App extends Component {
+  
+  state = {
+    productData: productData,
+    currentPreviewImagePos:0,
+    showHeartbeatSection:true,
+  }
+  OnColorOptionClick=(pos)=>{
+    const UpdatedPreviewImage=this.state.productData.colorOptions[pos].imageUrl
+    console.log(UpdatedPreviewImage)
+    this.setState({currentPreviewImagePos: pos});
+
+  }
+  OnFeatureItemClick=(pos)=>{
+    let updatedState=true;
+    if (pos===1){
+      updatedState=false;
+    }
+    this.setState({showHeartbeatSection : updatedState})
+  }
+
+
+  render(){
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TopBar/>
+      <div className="mainContainer">
+        <ProductPreview currentPreviewImage={this.state.productData.colorOptions[this.state.currentPreviewImagePos].imageUrl} 
+        showHeartbeatSection={this.state.showHeartbeatSection}/>
+        <ProductInfo data={this.state.productData} 
+        OnColorOptionClick={this.OnColorOptionClick}
+        OnFeatureItemClick={this.OnFeatureItemClick}/>
+      </div>
     </div>
+      </>
+    
   );
 }
-
+}
 export default App;

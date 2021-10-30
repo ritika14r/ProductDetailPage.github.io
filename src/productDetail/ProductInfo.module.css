@@ -1,0 +1,58 @@
+.productData{
+    width: 50%;
+    margin-right: 50px;
+    margin-top: 50px;
+  }
+  .productTitle{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .productDescription{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-right: 100px;
+  }
+  .color{
+    margin-top: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  }
+  
+  .imageOption{
+    box-shadow: 3px 3px 3px 3px rgb(0,0,0,0.3);
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .imageOption:hover{
+    box-shadow: 3px 3px 3px 3px rgb(0,0,0,0.5);
+  }
+  .buttonStyle{
+    min-width: 80px;
+    background-color:gainsboro;
+    border-radius: 8px;
+    border:0;
+    padding:12px 24px;
+    text-align: center;
+    margin-right: 12px;
+    box-sizing: content-box;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  .buttonStyle:hover{
+    color:white;
+    background-color: gray;
+  }
+  .buynowButton{
+    min-width: 100px;
+    background-color: lightseagreen;
+    border-radius: 5px;
+    border:0;
+    padding: 12px 24px;
+    text-align: center;
+    margin-top: 26px;
+    box-sizing: content-box;
+    cursor: pointer;
+    font-weight: 600;
+    color: white;
+  }
+  .buynowButton:hover{
+    color: white;
+    background-color: lightskyblue;
+  }
